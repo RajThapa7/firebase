@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+<h1>My awesome app</h1>
+<section id="whenSignedOut">
+<button id="signInBtn">Sign in with Google</button>
+</section>
+<section id="whenSignedIn" hidden = "true">
+<div id="userDetails"></div>
+<button id="signOutBtn">Sign Out</button>
+</section>
+<section>
+  <ul id="thingsList">
+
+  </ul>
+  <button id="createThing">Create Random Thing</button>
+</section>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC53HNB4NAfyiIHjKCGb2YMTqVKOYytoj8",
+        authDomain: "test-3e5fb.firebaseapp.com",
+        projectId: "test-3e5fb",
+        storageBucket: "test-3e5fb.appspot.com",
+        messagingSenderId: "993850986579",
+        appId: "1:993850986579:web:a4a29739f84c7d5242b6a6",
+      };
+      // Initialize Firebase
+      const app= firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
